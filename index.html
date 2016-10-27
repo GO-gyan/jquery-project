@@ -11,16 +11,31 @@
     <nav class="blue lighten-1" role="navigation">
       <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">Movie! Masti! Magic!</a>
-        <a href="" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Trending</a></li>
-          <li><a href="#">Latest</a></li>
-          <li><a href="#">Wishlist</a></li>
-          <li><a href="#">All</a></li>
+          <li><a href="#" class="waves-effect">Trending</a></li>
+          <li><a href="#" class="waves-effect">Latest</a></li>
+          <li><a href="#" class="waves-effect">Wishlist</a></li>
+          <li><a href="#" class="waves-effect">All</a></li>
         </ul>
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <div class="userView">
+                <img class="background" src="images/office.jpg">
+                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+          </li>
+          <li><a href="#" class="waves-effect">Trending</a></li>
+          <li><a href="#" class="waves-effect">Latest</a></li>
+          <li><a href="#" class="waves-effect">Wishlist</a></li>
+          <li><a href="#" class="waves-effect">All</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
     <script type="text/javascript" src="./lib/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="./lib/js/marerialize.min.js"></script>
+    <script type="text/javascript" src="./lib/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./src/js/init.js"></script>
   </body>
 </html>
