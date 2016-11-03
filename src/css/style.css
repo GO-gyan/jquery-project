@@ -1,0 +1,18 @@
+.nav-wrapper .brand-logo img {
+   height: 60px;
+}
+
+.mob-search {
+	display: inline-block;
+}
+
+input#search {
+	background-color: rgba(82, 80, 80, 0.13);
+	border-bottom: white;
+	border-left: white;
+	border-right: white;
+
+}
+
+
+

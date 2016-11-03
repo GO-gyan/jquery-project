@@ -6,24 +6,32 @@
     <title>jQuery</title>
     <link rel="stylesheet" href="./lib/css/materialize.min.css" media="screen" title="no title">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
   </head>
   <body>
     <nav class="blue lighten-1" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Movie! Masti! Magic!</a>
+        <a id="logo-container" href="#" class="brand-logo"><img class="" src="./src/images/movies-logo.png"/></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#" class="waves-effect">Trending</a></li>
           <li><a href="#" class="waves-effect">Latest</a></li>
           <li><a href="#" class="waves-effect">Wishlist</a></li>
           <li><a href="#" class="waves-effect">All</a></li>
+          <li>
+            <input id="search">
+          </li>
+          <li>
+            <i id="submit" class="material-icons">search</i>
+          </li>
         </ul>
         <ul id="slide-out" class="side-nav">
           <li>
             <div class="userView">
-                <img class="background" src="images/office.jpg">
-                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                <a href="#!name"><span class="white-text name">John Doe</span></a>
-                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                <img class="background" src="./src/images/office.jpg">
+                <a href="#!user"><img class="circle" src="./src/images/movies-logo.png"></a>
+                <div class="search">
+                  <span class="mob-search"><input id="search"></span><span class="mob-search"><i class="material-icons">search</i></span>
+                </div>
             </div>
           </li>
           <li><a href="#" class="waves-effect">Trending</a></li>
@@ -35,8 +43,57 @@
       </div>
     </nav>
 
-    <script type="text/javascript" src="./lib/js/jquery-3.1.1.min.js"></script>
+    <div class="slider" id="image-slider">
+    <ul class="slides">
+      <li>
+        <img src="./src/images/shivaay.jpg"> <!-- random image -->
+      </li>
+      <li>
+        <img src="./src/images/live-show.jpg"> <!-- random image -->
+      </li>
+      <li>
+        <img src="./src/images/sbi-offer.jpg"> <!-- random image -->
+      </li>
+      <li>
+        <img src="./src/images/jio-offer.jpg"> <!-- random image -->
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="well well-lg" id="searchResults">
+        <input type='hidden' id='current_page' />  
+        <input type='hidden' id='show_per_page' />
+        <div class="page-header">
+          <h1 class="textColor">search results.......</h1>
+        </div>
+        <div class="rows" id="resultValues">
+        </div>
+        <div class="col l12" id="navigation" style="text-align: center">
+          <ul id='page_navigation' class="pagination"></ul>
+        </div>
+      </div><!-- well ends here -->
+    </div>
+  </div>
+
+  <!-- Modal Trigger -->
+
+  <!-- Modal Structure -->
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <h4>Movie Information</h4>
+      <div id="myModalBody"></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="./lib/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./lib/js/mustache.js"></script>
     <script type="text/javascript" src="./src/js/init.js"></script>
+    <script type="text/javascript" src="./src/js/imdb-api-call.js"></script>
   </body>
 </html>

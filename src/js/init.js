@@ -4,3 +4,11 @@ $('.button-collapse').sideNav({
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
+
+$(document).ready(function(){
+    $('.slider').slider({full_width: true});
+    //$('.modal').modal();
+ });
+
+
+
